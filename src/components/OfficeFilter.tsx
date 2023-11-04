@@ -23,11 +23,12 @@ const OfficeFilter = (props: Props) => {
         <Select
           value={selectedOffice}
           label='Office'
+          id='officeSelect'
           onChange={(e) => setSelectedOffice(e.target.value)}
         >
           <MenuItem value='All'>All Locations</MenuItem>
           {offices.map((office: string, index: number) => (
-            <MenuItem key={index} value={office}>
+            <MenuItem key={index} value={office} id={`office${index}`}>
               {office}
             </MenuItem>
           ))}

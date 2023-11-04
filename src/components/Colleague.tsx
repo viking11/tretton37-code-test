@@ -26,7 +26,7 @@ const ColleagueImage = styled.img`
 const Colleague = (props: Props) => {
   const { item } = props;
   return (
-    <ColleagueWrapper>
+    <ColleagueWrapper id='colleague'>
       <ColleagueImage
         src={item.imagePortraitUrl ? item.imagePortraitUrl : noUserImg}
       />
