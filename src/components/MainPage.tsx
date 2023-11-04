@@ -92,6 +92,7 @@ const MainPage = () => {
           label='Search colleague'
           variant='outlined'
           type='search'
+          id='searchField'
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
         />
       </FiltersWrapper>
