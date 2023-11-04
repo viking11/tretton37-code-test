@@ -27,9 +27,6 @@ const Colleague = (props: Props) => {
   const { item } = props;
   return (
     <ColleagueWrapper>
-      {
-        // TODO: add fallback if no image present
-      }
       <ColleagueImage
         src={item.imagePortraitUrl ? item.imagePortraitUrl : noUserImg}
       />

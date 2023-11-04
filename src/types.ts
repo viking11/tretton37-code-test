@@ -18,3 +18,8 @@ export type CollegueType = {
   stackOverflow: string;
   twitter: string;
 };
+
+export type SortType = {
+  label: string;
+  name: string;
+};
