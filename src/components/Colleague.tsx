@@ -3,6 +3,7 @@ import { CollegueType } from '../types';
 import linkedin from '../assets/linkedin.png';
 import github from '../assets/github.png';
 import twitter from '../assets/twitter.png';
+import noUserImg from '../assets/no-user-image.png';
 import SocialsButton from './buttons/SocialsButton';
 
 type Props = {
@@ -29,7 +30,9 @@ const Colleague = (props: Props) => {
       {
         // TODO: add fallback if no image present
       }
-      <ColleagueImage src={item.imagePortraitUrl} />
+      <ColleagueImage
+        src={item.imagePortraitUrl ? item.imagePortraitUrl : noUserImg}
+      />
       <p>{item.name}</p>
       <p>Office: {item.office}</p>
       <SocialsButton
