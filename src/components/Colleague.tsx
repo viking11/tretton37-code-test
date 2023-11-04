@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import { CollegueType } from '../types';
+import linkedin from '../assets/linkedin.png';
+import github from '../assets/github.png';
+import twitter from '../assets/twitter.png';
+import SocialsButton from './buttons/SocialsButton';
 
 type Props = {
   item: CollegueType;
@@ -28,11 +32,18 @@ const Colleague = (props: Props) => {
       <ColleagueImage src={item.imagePortraitUrl} />
       <p>{item.name}</p>
       <p>Office: {item.office}</p>
-      <div>
-        <p>{item.linkedIn}</p>
-        <p>{item.gitHub}</p>
-        <p>{item.twitter}</p>
-      </div>
+      <SocialsButton
+        icon={linkedin}
+        url={`https://www.linkedin.com${item.linkedIn}`}
+      />
+      <SocialsButton
+        icon={github}
+        url={`https://www.github.com/${item.gitHub}`}
+      />
+      <SocialsButton
+        icon={twitter}
+        url={`https://www.twitter.com/${item.twitter}`}
+      />
     </ColleagueWrapper>
   );
 };
