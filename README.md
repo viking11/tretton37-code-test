@@ -1,27 +1,61 @@
-# React + TypeScript + Vite
+# Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This product showcases the employees retrived from the https://api.1337co.de/v3/employees api.
+It shows a simple list of employees with picture, name and office. Aswell as buttons that will take you to that employees socials.
+There is also a rudimentary filtering/sorting functionality.
+The product has been tested in Chrome, firefox and edge.
 
-Currently, two official plugins are available:
+# Thoughts behind the design of the code
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I've kept the code clean and elegant, easy to understand for other developers and easy to get into.
+I've seperated out code chunks into their own helper functions to make the code more readable.
+I've made sure my code follows the DRY principle, for instance by rendering JSX elements through an array.map function.
 
-## Expanding the ESLint configuration
+# Motivation and reasoning of installed packages
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The packages used in this project are ones that i am familiar with and understand how to use,
+This helps speed up the development.
 
-- Configure the top-level `parserOptions` property like this:
+# A list of the stories i selected and why i chose the features that i did
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Modern CSS
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+I decided to use styled-components for some modern CSS, i feel this makes development much smoother, and reading of the code easier.
+
+## Sort by name and office
+
+Sorting by name and office seems like a shoe-in feature for this project.
+
+## Filter by name and office
+
+As before, filtering by name and office seems like a pretty standard feature.
+
+## Use Typescript
+
+I really like using typescript, and it feels like a natural progression over just standard JS, especially for larger projects.
+
+## End-to-end testing
+
+I wanted to show some simple e2e testing using cypress.
+Testing is a neccessary evil, done right it can save developers for headahces in the future.
+
+# Instructions on how to install and run the application
+
+Clone repo from git
+run 'yarn install'
+add a '.env' file to project root. add the line 'VITE_API_KEY={api_key}' where api_key is the api key i got from Sandra
+but i wont include it here for security reasons.
+run 'yarn dev' to start the server
+
+The server should now be running and you can use it.
+
+To run tests:
+run 'yarn cypress:run' to run the tests in the CLI.
+
+If you want to see the tests run with cypress's own test application
+run 'yarn cypress:open'
+click the "E2E Testing" box
+click "start E2E testing in..."
+in the new window that opens, click "main.cy.ts"
+The test runs and you can look through each step of the test in the sidebar.
+NOTE: the test runs very fast, and it might take a few seconds for the picture to update in this view.
