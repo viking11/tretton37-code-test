@@ -4,7 +4,7 @@ describe('Main test', () => {
   });
 
   it('Goes to local page and searches for a person', () => {
-    cy.visit('http://127.0.0.1:5173/');
+    cy.visit('http://localhost:5173/');
     cy.wait(1000);
     cy.get('#officeSelect').click();
     cy.get('#office0').click();
