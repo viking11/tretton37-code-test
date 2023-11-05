@@ -1,13 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import styled from 'styled-components';
 import axios from 'axios';
-import Colleague from './Colleague';
+import Colleague from '../components/Colleague';
 import { CollegueType } from '../types';
-import OfficeFilter from './OfficeFilter';
+import OfficeFilter from '../components/OfficeFilter';
 import { SetStateAction, useEffect, useState } from 'react';
 import { CircularProgress, TextField } from '@mui/material';
-import SortingSelect from './SortingSelect';
-import { handleFiltering } from './utils';
+import SortingSelect from '../components/SortingSelect';
+import { handleFiltering } from '../utils/utils';
 
 const MainWrapper = styled.div`
   padding: 0 250px;
