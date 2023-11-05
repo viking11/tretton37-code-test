@@ -4,6 +4,7 @@ This product showcases the employees retrived from the https://api.1337co.de/v3/
 It shows a simple list of employees with picture, name and office. Aswell as buttons that will take you to that employees socials.
 There is also a rudimentary filtering/sorting functionality.
 The product has been tested in Chrome, firefox and edge.
+I used yarn for this project so you might have to install that, this can be done through npm.
 
 # Thoughts behind the design of the code
 
