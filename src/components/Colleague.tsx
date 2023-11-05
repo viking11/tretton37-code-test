@@ -33,6 +33,7 @@ const Colleague = (props: Props) => {
     <ColleagueWrapper id='colleague'>
       <ColleagueImage
         src={item.imagePortraitUrl ? item.imagePortraitUrl : noUserImg}
+        loading='lazy'
       />
       <ColleagueText>{item.name}</ColleagueText>
       <ColleagueText>Office: {item.office}</ColleagueText>
