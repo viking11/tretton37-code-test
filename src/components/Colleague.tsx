@@ -23,6 +23,10 @@ const ColleagueImage = styled.img`
   border: 1px solid #eadddd;
 `;
 
+const ColleagueText = styled.p`
+  font-family: sans-serif;
+`;
+
 const Colleague = (props: Props) => {
   const { item } = props;
   return (
@@ -30,20 +34,26 @@ const Colleague = (props: Props) => {
       <ColleagueImage
         src={item.imagePortraitUrl ? item.imagePortraitUrl : noUserImg}
       />
-      <p>{item.name}</p>
-      <p>Office: {item.office}</p>
-      <SocialsButton
-        icon={linkedin}
-        url={`https://www.linkedin.com${item.linkedIn}`}
-      />
-      <SocialsButton
-        icon={github}
-        url={`https://www.github.com/${item.gitHub}`}
-      />
-      <SocialsButton
-        icon={twitter}
-        url={`https://www.twitter.com/${item.twitter}`}
-      />
+      <ColleagueText>{item.name}</ColleagueText>
+      <ColleagueText>Office: {item.office}</ColleagueText>
+      {item.linkedIn && (
+        <SocialsButton
+          icon={linkedin}
+          url={`https://www.linkedin.com${item.linkedIn}`}
+        />
+      )}
+      {item.gitHub && (
+        <SocialsButton
+          icon={github}
+          url={`https://www.github.com/${item.gitHub}`}
+        />
+      )}
+      {item.twitter && (
+        <SocialsButton
+          icon={twitter}
+          url={`https://www.twitter.com/${item.twitter}`}
+        />
+      )}
     </ColleagueWrapper>
   );
 };
